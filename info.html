@@ -1,0 +1,110 @@
+first change thepermission of storage
+
+
+php composer.phar create-project --prefer-dist laravel/laravel laravelCart
+
+
+export http_proxy="http://akhila.aralimarajana:Akila@nakul9012@proxy:3128"
+export http_proxy="http://akhila.aralimarajana:Akila@nakul9012@proxy:3128"
+
+php artisan make:model models/Order
+php artisan make:model models/Type
+php artisan make:model models/Product
+
+***********laravel.com/docs/5.2/eloquent
+
+view engine
+blade
+
+{{print_r($errors->all())}}
+{{is to echo}}
+
+
+install laravel collective
+"laravelcollective/html": "5.2.*"
+
+get composer.phar on to ur folder
+
+set up proxy and update ur folder with new dependency php composer.phar update
+
+
+**you have to change view storage and resiurces to readable and writable to work properly
+
+
+for autofilling of inouts go to user and cjange
+
+App\Http\Requests\Request\createUserRequest is called dependecy injection type hinting
+
+
+got to request folder to add rules to ur form request
+
+{{-- 	{!! Form::open(array('url' => 'users')) !!} --}} {{-- manual way --}}
+
+
+
+{{dd(\App\models\type::lists('name'))}}
+to check the array
+console .log
+
+
+you shouldnt let user check details unless login so auth
+
+php artisan make:middleware AuthorisedUserMiddleware
+once you create middle ware register it in the kernel
+
+
+
+we need authorised user middle ware because if u login as one user and try to check other user details it will show u so to check if ur trying to view only your details do this
+
+
+when u have product()=accesing relation shiop
+
+Product=dynamic property, product()->get();
+
+
+steps
+1.copy the template
+2.create a composer.phar file
+3.create project php composer.phar create-project --prefer-dist laravel/laravel cart
+4.configuare env to connect to database
+5.use artisian to create models
+6.to do somethinf with form just add "laravelcollective/html": "5.2.*" into ur composer.jason and set the proxy and it will run composer update
+and den add provider and alias thingy
+7.to login and authenticate
+Auth::
+config\auth.php and change the details 
+8.Pagination
+in your route instead of all() use paginate(1)
+and inside your post page add
+{!!$posts->links()!!}
+9.u need to set models filled to post datat intp database
+10.if it says forbidden u need to set it to true in requestpage
+11.when ur getting post->comments()->get or post->comments
+when u have copmments() u need to have get 
+12 create authorised user middleware
+
+
+
+13.$product=\App\models\Product::withTrashed()->find($id); will give u products along with soft deleted ones
+14.prevent link reload the new page using prevent default ajax and cut out header and footer
+@if(Request::ajax() == false)
+
+
+		</div>
+		<footer></footer>
+
+	</div><!-- container -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/spins.js')}}"></script>
+
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
+@endif
+
+15>for editable to work data-editable="firstname"
+you need to have jquery.jeditable plugin
